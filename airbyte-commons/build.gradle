@@ -1,0 +1,7 @@
+plugins {
+    id "java-library"
+}
+
+dependencies {
+    // Dependencies for this module should be specified in the top-level build.gradle.
+}

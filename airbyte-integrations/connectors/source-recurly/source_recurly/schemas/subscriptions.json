@@ -1,0 +1,203 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "object": {
+      "type": "string"
+    },
+    "uuid": {
+      "type": "string"
+    },
+    "account": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "object": {
+          "type": "string"
+        },
+        "code": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "first_name": {
+          "type": "string"
+        },
+        "last_name": {
+          "type": "string"
+        },
+        "company": {
+          "type": "string"
+        },
+        "parent_account_id": {
+          "type": ["null", "string"]
+        },
+        "bill_to": {
+          "type": "string"
+        }
+      }
+    },
+    "plan": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "object": {
+          "type": "string"
+        },
+        "code": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "state": {
+      "type": "string"
+    },
+    "shipping": {
+      "type": "object",
+      "properties": {
+        "object": {
+          "type": "string"
+        },
+        "address": {
+          "type": ["null", "object"]
+        },
+        "method": {
+          "type": ["null", "object"],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "object": {
+              "type": "string"
+            },
+            "code": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          }
+        },
+        "amount": {
+          "type": "number"
+        }
+      }
+    },
+    "coupon_redemptions": {
+      "type": ["null", "array"]
+    },
+    "pending_change": {
+      "type": ["null", "object"]
+    },
+    "current_period_started_at": {
+      "type": "string"
+    },
+    "current_period_ends_at": {
+      "type": "string"
+    },
+    "current_term_started_at": {
+      "type": "string"
+    },
+    "current_term_ends_at": {
+      "type": "string"
+    },
+    "trial_started_at": {
+      "type": ["null", "string"]
+    },
+    "trial_ends_at": {
+      "type": ["null", "string"]
+    },
+    "remaining_billing_cycles": {
+      "type": "number"
+    },
+    "total_billing_cycles": {
+      "type": "number"
+    },
+    "renewal_billing_cycles": {
+      "type": "number"
+    },
+    "auto_renew": {
+      "type": "boolean"
+    },
+    "paused_at": {
+      "type": ["null", "string"]
+    },
+    "remaining_pause_cycles": {
+      "type": ["null", "number"]
+    },
+    "currency": {
+      "type": "string"
+    },
+    "revenue_schedule_type": {
+      "type": "string"
+    },
+    "unit_amount": {
+      "type": "number"
+    },
+    "quantity": {
+      "type": "number"
+    },
+    "add_ons": {
+      "type": "array"
+    },
+    "add_ons_total": {
+      "type": "number"
+    },
+    "subtotal": {
+      "type": "number"
+    },
+    "collection_method": {
+      "type": "string"
+    },
+    "po_number": {
+      "type": "string"
+    },
+    "net_terms": {
+      "type": "number"
+    },
+    "terms_and_conditions": {
+      "type": ["null", "string"]
+    },
+    "customer_notes": {
+      "type": ["null", "string"]
+    },
+    "expiration_reason": {
+      "type": ["null", "string"]
+    },
+    "custom_fields": {
+      "type": "array"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "updated_at": {
+      "type": "string"
+    },
+    "activated_at": {
+      "type": "string"
+    },
+    "canceled_at": {
+      "type": ["null", "string"]
+    },
+    "expires_at": {
+      "type": ["null", "string"]
+    },
+    "bank_account_authorized_at": {
+      "type": ["null", "string"]
+    },
+    "billing_info_id": {
+      "type": ["null", "string"]
+    }
+  }
+}
