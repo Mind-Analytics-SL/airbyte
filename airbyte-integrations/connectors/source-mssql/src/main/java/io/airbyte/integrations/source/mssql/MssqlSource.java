@@ -153,7 +153,7 @@ public class MssqlSource extends AbstractJdbcSource<JDBCType> implements Source 
 
   protected void assertCdcSchemaQueryable(final JsonNode config, final JdbcDatabase database) throws SQLException {
     final List<JsonNode> queryResponse = database.query(connection -> {
-      final String sql = "USE " + config.get("database").asText() + "; SELECT * FROM cdc.change_tables";
+      final String sql = "USE [" + config.get("database").asText() + "]; SELECT * FROM cdc.change_tables";
       final PreparedStatement ps = connection.prepareStatement(sql);
       LOGGER.info(String.format("Checking user '%s' can query the cdc schema and that we have at least 1 cdc enabled table using the query: '%s'",
           config.get("username").asText(), sql));
